@@ -12,6 +12,7 @@ Requerimientos técnicos:
 •	Optimización de la entrega del cambio. 
 */
 #include <stdio.h>
+#include <math.h>
 
 void calcularCambio(float cambio);
 
@@ -29,9 +30,9 @@ int main() {
 
         switch(opc) {
             case 1:
-                printf("Por favor ingrese su tiempo en el estacionamiento (en horas o fracciones):\n");
+                printf("Por favor ingrese su tiempo en el estacionamiento ($2.5 hora o fraccion): ");
                 scanf("%f", &tiempo);
-                tarifa = tiempo * 2.5;
+                tarifa = ceil(tiempo) * 2.5;
                 printf("La tarifa es: $%.2f\n", tarifa);
                 break;
             case 2:
@@ -55,7 +56,7 @@ int main() {
                 cambio = cambio - monedas010 * 0.10;
                 monedas005 = cambio / 0.05;
                 cambio = cambio - monedas005 * 0.05;
-                printf("Desglose del cambio:\n");
+                printf("\nDesglose del cambio:\n");
                 printf("Billetes de $20: %d\n", billetes20);
                 printf("Billetes de $10: %d\n", billetes10);
                 printf("Billetes de $5: %d\n", billetes5);
