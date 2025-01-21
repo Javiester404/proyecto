@@ -55,7 +55,6 @@ int main() {
                 cambio = cambio - monedas010 * 0.10;
                 monedas005 = cambio / 0.05;
                 cambio = cambio - monedas005 * 0.05;
-
                 printf("Desglose del cambio:\n");
                 printf("Billetes de $20: %d\n", billetes20);
                 printf("Billetes de $10: %d\n", billetes10);
