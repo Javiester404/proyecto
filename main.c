@@ -14,7 +14,6 @@ Requerimientos técnicos:
 #include <stdio.h>
 #include <math.h>
 
-void calcularCambio(float cambio);
 
 int main() {
     float tiempo, tarifa, pago, cambio;
